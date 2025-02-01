@@ -63,8 +63,8 @@ function AboutSection() {
         Step into the spotlight with $KANYE! This isn&apos;t just any token—it&apos;s a trendsetter in the fan token
         revolution. By holding $KANYE, you join a community driven to make history. Think $Drake or $Kendrick could do
         better? Well, they don&apos;t even exist yet! But if you&apos;re bold enough, go ahead and launch
-        them—let&apos;s see who hits $1B first! We're going HAM on Kanye—the one and only GOAT! Let's elevate Kanye's
-        influence in the crypto space together. WAGMI!
+        them—let&apos;s see who hits $1B first! We&apos;re going HAM on Kanye—the one and only GOAT! Let&apos;s elevate
+        Kanye&apos;s influence in the crypto space together. WAGMI!
       </p>
       <div className="flex justify-center">
         <KanyeQuote />
@@ -78,8 +78,8 @@ function HowItWorksSection() {
     <motion.section {...fadeIn} className="space-y-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-center">The $KANYE Journey – Inspired by the Legend 🎶</h2>
       <p className="text-lg sm:text-xl text-center">
-        $KANYE isn't just another token—it follows a structured path inspired by{" "}
-        <strong>Kanye West's iconic albums</strong>, each representing a key phase in the ecosystem's growth.
+        $KANYE isn&apos;t just another token—it follows a structured path inspired by{" "}
+        <strong>Kanye West&apos;s iconic albums</strong>, each representing a key phase in the ecosystem&apos;s growth.
       </p>
 
       <div className="space-y-8">
@@ -87,7 +87,7 @@ function HowItWorksSection() {
           title='"The College Dropout" – Fair Launch (Moonshot)'
           emoji="🎓"
           content={[
-            "Just like Kanye's breakthrough, $KANYE starts with no pre-sales, no insider allocations—it's a fair launch for everyone.",
+            "Just like Kanye&apos;s breakthrough, $KANYE starts with no pre-sales, no insider allocations—it&apos;s a fair launch for everyone.",
             "Anyone can buy at launch and start their journey.",
             "1% fee on buys & sells (while on Moonshot) to maintain market health.",
             "When the market cap reaches 432 SOL (or 25 ETH), $KANYE graduates to the next level.",
