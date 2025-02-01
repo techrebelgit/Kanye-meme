@@ -119,7 +119,7 @@ function HowItWorksSection() {
 
       <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
         <h3 className="text-2xl font-bold">Example: How You Earn SOL Rewards</h3>
-        <p>Let's say:</p>
+        <p>Let&apos;s say:</p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
             You hold <strong>5M $KANYE tokens</strong>.
