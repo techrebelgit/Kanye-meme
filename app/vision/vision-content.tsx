@@ -27,7 +27,7 @@ export default function VisionContent() {
 function Hero() {
   return (
     <motion.section {...fadeIn} className="text-center space-y-6">
-      <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter">Tell the Vision</h1>
+      <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter">Our Vision</h1>
       <p className="text-xl sm:text-2xl max-w-2xl mx-auto">
         Uniting fans, building momentum, and shaping the future of fan engagement.
       </p>
@@ -41,12 +41,12 @@ function Hero() {
 function IntroductionSection() {
   return (
     <motion.section {...fadeIn} className="space-y-6">
-      <h2 className="text-3xl sm:text-4xl font-bold"> Fan Tokens</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold">Introduction to Fan Tokens</h2>
       <p className="text-lg sm:text-xl">
         Fan tokens are a powerful way for communities to come together around a common goal. They allow fans to unite,
-        collaborate, and engage in meaningful ways, fostering a shared movement. The $KANYE token is currently not officially
+        collaborate, and engage in meaningful ways, fostering a shared movement. The $KANYE token is not officially
         affiliated with Kanye West, but it serves as a rallying point for fans to connect, build momentum, and work
-        towards bringing Kanye into this ecosystem. By participating, vibing, and sharing fans contribute to a collective effort that
+        towards bringing Kanye into the ecosystem. By participating, fans contribute to a collective effort that
         amplifies their shared passion and vision.
       </p>
       <div className="flex justify-center">
@@ -61,11 +61,11 @@ function AboutSection() {
     <motion.section {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">About $KANYE</h2>
       <p className="text-lg sm:text-xl">
-        Step into the spotlight with $KANYE! This isn't just any token—it's a trendsetter in the fan token revolution.
-        By holding $KANYE, you join a community driven to make history. Think $Drake or $Kendrick could do better? Well,
-        they don't even exist yet! But if you're bold enough, go ahead and launch them—let's see who hits $1B first!
-        We're going H.A.M. on Kanye—the one and only GOAT! Let's elevate Kanye's influence in the crypto space together.
-        WAGMI!
+        Step into the spotlight with $KANYE! This isn&apos;t just any token—it&apos;s a trendsetter in the fan token
+        revolution. By holding $KANYE, you join a community driven to make history. Think $Drake or $Kendrick could do
+        better? Well, they don&apos;t even exist yet! But if you&apos;re bold enough, go ahead and launch
+        them—let&apos;s see who hits $1B first! We're going HAM on Kanye—the one and only GOAT! Let's elevate Kanye's
+        influence in the crypto space together. WAGMI!
       </p>
       <div className="flex justify-center">
         <KanyeQuote />
@@ -79,7 +79,7 @@ function HowItWorksSection() {
     <motion.section {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">How It Works</h2>
       <p className="text-lg sm:text-xl">
-        Get $KANYE train and join the movement! Here's how you can get involved:
+        Jump on the $KANYE train and join the movement! Here's how you can get involved:
       </p>
       <ul className="space-y-4">
         <ListItem
@@ -128,4 +128,3 @@ function ListItem({ icon, text }: { icon: React.ReactNode; text: string }) {
     </li>
   )
 }
-
