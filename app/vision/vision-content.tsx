@@ -5,7 +5,7 @@ import { Zap, Users, Trophy } from "lucide-react"
 import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { KanyeQuote } from "@/components/kanye-quote"
+import { KanyeQuote }  from "@/components/kanye-quote"
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
