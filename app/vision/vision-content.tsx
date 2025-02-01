@@ -64,7 +64,7 @@ function AboutSection() {
         Step into the spotlight with $KANYE! This isn&apos;t just any token—it&apos;s a trendsetter in the fan token
         revolution. By holding $KANYE, you join a community driven to make history. Think $Drake or $Kendrick could do
         better? Well, they don&apos;t even exist yet! But if you&apos;re bold enough, go ahead and launch
-        them—let&apos;s see who hits $1B first! We're going HAM on Kanye—the one and only GOAT! Let's elevate Kanye's
+        them—let&apos;s see who hits $1B first! We&apos;re going HAM on Kanye—the one and only GOAT! Let&apos;s elevate Kanye&apos;s
         influence in the crypto space together. WAGMI!
       </p>
       <div className="flex justify-center">
@@ -79,7 +79,7 @@ function HowItWorksSection() {
     <motion.section {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">How It Works</h2>
       <p className="text-lg sm:text-xl">
-        Jump on the $KANYE train and join the movement! Here's how you can get involved:
+        Jump on the $KANYE train and join the movement! Here&apos;s how you can get involved:
       </p>
       <ul className="space-y-4">
         <ListItem

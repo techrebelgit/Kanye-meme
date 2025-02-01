@@ -15,7 +15,7 @@ export default function Home() {
         <section className="text-center space-y-12 max-w-5xl mx-auto w-full">
           <div className="space-y-6">
             <h2 className="text-7xl sm:text-9xl font-bold tracking-tighter">$KANYE</h2>
-            <p className="text-xl sm:text-2xl max-w-2xl mx-auto">The meme token that's stronger than ever.</p>
+            <p className="text-xl sm:text-2xl max-w-2xl mx-auto">The meme token that&apos;s stronger than ever.</p>
           </div>
           <div className="relative w-full aspect-[3/4] max-w-md mx-auto">
             <Image
@@ -31,7 +31,7 @@ export default function Home() {
         <section className="text-center space-y-6 max-w-2xl mx-auto">
           <h3 className="text-3xl sm:text-4xl font-bold">About</h3>
           <p className="text-lg sm:text-xl">
-            $KANYE is not just a meme token. It's a movement. A statement. A digital revolution inspired by the
+            $KANYE is not just a meme token. It&apos;s a movement. A statement. A digital revolution inspired by the
             unapologetic creativity of Kanye West.
           </p>
           <KanyeQuote />
