@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
-const HELIUS_RPC_URL = process.env.NEXT_PUBLIC_HELIUS_RPC_URL || ""
+const HELIUS_RPC_URL = "https://mainnet.helius-rpc.com/?api-key=" + (process.env.NEXT_PUBLIC_HELIUS_API_KEY || "")
 
 interface TokenHolder {
   address: string
