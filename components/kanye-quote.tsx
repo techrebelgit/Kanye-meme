@@ -22,6 +22,10 @@ export function KanyeQuote() {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)])
   }, [])
 
-  return <div className="italic text-sm sm:text-base max-w-md">"{quote}"</div>
+  return (
+    <div
+      className="italic text-sm sm:text-base max-w-md"
+      dangerouslySetInnerHTML={{ __html: `&ldquo;${quote}&rdquo;` }}
+    />
+  )
 }
-
