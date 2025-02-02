@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "The meme token that's stronger than ever.",
     images: [
       {
-        url: "/sitethumbnail.jpg",
+        url: "/thumbnail.jpg",
         width: 1200,
         height: 630,
         alt: "Artistic portrait of Kanye in vibrant colors",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "$KANYE Token",
     description: "The meme token that's stronger than ever.",
-    images: ["/sitethumbnail.jpg"],
+    images: ["/thumbnail.jpg"],
   },
 }
 
