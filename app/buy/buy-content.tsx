@@ -1,37 +1,37 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import Script from "next/script"
 
 const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
 
 export default function BuyContent() {
+  const containerRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
-    const initJupiter = () => {
-      if (typeof window.Jupiter !== "undefined") {
+    const script = document.createElement("script")
+    script.src = "https://terminal.jup.ag/main-v3.js"
+    script.async = true
+
+    script.onload = () => {
+      if (typeof window.Jupiter !== "undefined" && containerRef.current) {
         window.Jupiter.init({
           displayMode: "integrated",
           integratedTargetId: "integrated-terminal",
-          endpoint: "https://api.mainnet-beta.solana.com",
+          endpoint: "https://api.mainnet-beta.solana.com", // You can change this to your preferred RPC endpoint
           defaultExplorer: "Solscan",
           formProps: {
-            fixedOutputMint: true,
             initialOutputMint: KANYE_TOKEN_MINT,
-            initialSlippageBps: 5,
+            fixedOutputMint: true,
           },
         })
       }
     }
 
-    // Initialize Jupiter if the script is already loaded
-    initJupiter()
-
-    // Backup initialization in case the script loads after our first attempt
-    window.addEventListener("load", initJupiter)
+    document.body.appendChild(script)
 
     return () => {
-      window.removeEventListener("load", initJupiter)
+      document.body.removeChild(script)
     }
   }, [])
 
@@ -55,10 +55,14 @@ export default function BuyContent() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex justify-center"
       >
-        <Script src="https://terminal.jup.ag/main-v3.js" strategy="lazyOnload" />
-        <div id="integrated-terminal" className="w-full max-w-[480px] h-[600px] bg-white rounded-lg shadow-sm" />
+        <div
+          id="integrated-terminal"
+          ref={containerRef}
+          style={{ width: "100%", maxWidth: "480px", height: "660px" }}
+        />
       </motion.div>
     </div>
   )
 }
+
 
