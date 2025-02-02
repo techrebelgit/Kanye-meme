@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import type React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { KanyeQuote } from "@/components/kanye-quote"
@@ -16,6 +15,7 @@ export default function VisionContent() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-16 space-y-24">
       <Hero />
+      <TableOfContents />
       <IntroductionSection />
       <AboutSection />
       <HowItWorksSection />
@@ -37,9 +37,34 @@ function Hero() {
   )
 }
 
+function TableOfContents() {
+  return (
+    <motion.nav {...fadeIn} className="bg-white p-6 rounded-lg shadow-sm">
+      <h2 className="text-2xl font-bold mb-4">Table of Contents</h2>
+      <ul className="space-y-2">
+        <li>
+          <a href="#introduction" className="text-[#333333] hover:text-[#555555]">
+            Introduction to Fan Tokens
+          </a>
+        </li>
+        <li>
+          <a href="#about" className="text-[#333333] hover:text-[#555555]">
+            About $KANYE
+          </a>
+        </li>
+        <li>
+          <a href="#how-it-works" className="text-[#333333] hover:text-[#555555]">
+            How It Works
+          </a>
+        </li>
+      </ul>
+    </motion.nav>
+  )
+}
+
 function IntroductionSection() {
   return (
-    <motion.section {...fadeIn} className="space-y-6">
+    <motion.section id="introduction" {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">Introduction to Fan Tokens</h2>
       <p className="text-lg sm:text-xl">
         Fan tokens are a powerful way for communities to come together around a common goal. They allow fans to unite,
@@ -57,7 +82,7 @@ function IntroductionSection() {
 
 function AboutSection() {
   return (
-    <motion.section {...fadeIn} className="space-y-6">
+    <motion.section id="about" {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">About $KANYE</h2>
       <p className="text-lg sm:text-xl">
         Step into the spotlight with $KANYE! This isn&apos;t just any token—it&apos;s a trendsetter in the fan token
@@ -75,7 +100,7 @@ function AboutSection() {
 
 function HowItWorksSection() {
   return (
-    <motion.section {...fadeIn} className="space-y-8">
+    <motion.section id="how-it-works" {...fadeIn} className="space-y-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-center">The $KANYE Journey – Inspired by the Legend 🎶</h2>
       <p className="text-lg sm:text-xl text-center">
         $KANYE isn&apos;t just another token—it follows a structured path inspired by{" "}
@@ -196,15 +221,6 @@ function PhaseCard({ title, emoji, content }: { title: string; emoji: string; co
         ))}
       </ul>
     </div>
-  )
-}
-
-function ListItem({ icon, text }: { icon: React.ReactNode; text: string }) {
-  return (
-    <li className="flex items-start">
-      <div className="mr-4 mt-1">{icon}</div>
-      <p className="text-[#333333]">{text}</p>
-    </li>
   )
 }
 
