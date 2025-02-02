@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     description: "The meme token that's stronger than ever.",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7CfMn.png",
+        url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23FFFFFF'/%3E%3C/svg%3E",
         width: 1200,
-        height: 800,
-        alt: "Dramatic black and white photograph from Saint Pablo tour",
+        height: 630,
+        alt: "$KANYE Token",
       },
     ],
   },
@@ -24,7 +24,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "$KANYE Token",
     description: "The meme token that's stronger than ever.",
-    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7CfMn.png"],
+    images: [
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%23FFFFFF'/%3E%3C/svg%3E",
+    ],
   },
 }
 
