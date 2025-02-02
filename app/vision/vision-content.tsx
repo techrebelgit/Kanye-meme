@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { KanyeQuote } from "@/components/kanye-quote"
 
@@ -25,11 +26,20 @@ export default function VisionContent() {
 
 function Hero() {
   return (
-    <motion.section {...fadeIn} className="text-center space-y-6">
+    <motion.section {...fadeIn} className="text-center space-y-8">
       <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter">Our Vision</h1>
       <p className="text-xl sm:text-2xl max-w-2xl mx-auto">
         Uniting fans, building momentum, and shaping the future of fan engagement.
       </p>
+      <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden">
+        <Image
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaintPablo-OrECXD3hT1a7z0t9Z9YbPkeBBEMWcL.png"
+          alt="Dramatic black and white photograph from Saint Pablo tour"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
       <div className="flex justify-center">
         <KanyeQuote />
       </div>

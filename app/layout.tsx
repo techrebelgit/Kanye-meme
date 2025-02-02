@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import type React from "react"
-import thumbnail from "../public/thumbnail.jpg"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,10 +13,10 @@ export const metadata: Metadata = {
     description: "The meme token that's stronger than ever.",
     images: [
       {
-        url: thumbnail.src,
-        width: thumbnail.width,
-        height: thumbnail.height,
-        alt: "Artistic portrait of Kanye in vibrant colors",
+        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaintPablo-OrECXD3hT1a7z0t9Z9YbPkeBBEMWcL.png",
+        width: 1200,
+        height: 800,
+        alt: "Dramatic black and white photograph from Saint Pablo tour",
       },
     ],
   },
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "$KANYE Token",
     description: "The meme token that's stronger than ever.",
-    images: [thumbnail.src],
+    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SaintPablo-OrECXD3hT1a7z0t9Z9YbPkeBBEMWcL.png"],
   },
 }
 
