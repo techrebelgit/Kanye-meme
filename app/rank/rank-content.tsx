@@ -5,6 +5,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { formatNumber } from "@/lib/utils"
 
 interface TokenHolder {
   address: string
@@ -64,11 +65,11 @@ export default function RankContent() {
           </p>
           <p className="mb-4">
             The amount of rewards each holder receives is proportional to their share of the total tokens held by the
-            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you&apos;ll receive 10% of
+            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you'll receive 10% of
             the daily rewards.
           </p>
           <p>
-            The percentages shown in the table below represent each wallet&apos;s share of the potential rewards, based on
+            The percentages shown in the table below represent each wallet's share of the potential rewards, based on
             their current token balance.
           </p>
         </motion.div>
@@ -114,10 +115,10 @@ export default function RankContent() {
                           {holder.address.slice(0, 4)}...{holder.address.slice(-4)}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
-                          {holder.amount.toLocaleString()}
+                          {formatNumber(Math.floor(holder.amount / 1e9))} $KANYE
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
-                          {holder.rewardPercentage.toFixed(2)}%
+                          {holder.rewardPercentage.toFixed(4)}%
                         </td>
                       </tr>
                     ))}
