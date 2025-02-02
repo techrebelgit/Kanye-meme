@@ -64,11 +64,11 @@ export default function RankContent() {
           </p>
           <p className="mb-4">
             The amount of rewards each holder receives is proportional to their share of the total tokens held by the
-            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you'll receive 10% of
+            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you&apos;ll receive 10% of
             the daily rewards.
           </p>
           <p>
-            The percentages shown in the table below represent each wallet's share of the potential rewards, based on
+            The percentages shown in the table below represent each wallet&apos;s share of the potential rewards, based on
             their current token balance.
           </p>
         </motion.div>
