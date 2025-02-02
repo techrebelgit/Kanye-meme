@@ -36,9 +36,14 @@ export default function Header() {
       )}
       <div className="flex items-center space-x-4">
         {isDesktop && (
-          <Link href="/vision" className="text-[#333333] hover:text-[#555555]">
-            Vision
-          </Link>
+          <>
+            <Link href="/vision" className="text-[#333333] hover:text-[#555555]">
+              Vision
+            </Link>
+            <Link href="/rank" className="text-[#333333] hover:text-[#555555]">
+              Rank
+            </Link>
+          </>
         )}
         <Button asChild className="bg-[#333333] text-white hover:bg-[#555555]">
           <Link
@@ -54,6 +59,9 @@ export default function Header() {
         <div className="absolute top-full left-0 w-full bg-white shadow-md py-2 z-10">
           <Link href="/vision" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
             Vision
+          </Link>
+          <Link href="/rank" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
+            Rank
           </Link>
         </div>
       )}

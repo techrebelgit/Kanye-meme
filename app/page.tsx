@@ -1,15 +1,14 @@
-import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { KanyeQuote }  from "@/components/kanye-quote"
+import { KanyeQuote } from "@/components/kanye-quote"
 import { SocialLinks } from "@/components/social-links"
 import Header from "@/components/header"
+import Link from "next/link"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-[#333333] flex flex-col">
-        <Header/>
-
+      <Header />
 
       <main className="flex-grow flex flex-col justify-center items-center px-4 space-y-20">
         <section className="text-center space-y-12 max-w-5xl mx-auto w-full">
@@ -20,7 +19,7 @@ export default function Home() {
           <div className="relative w-full aspect-[3/4] max-w-md mx-auto">
             <Image
               src="/kanye-portrait.jpg"
-              alt="Artistic black and white portrait of Kanye"
+              alt="Artistic portrait of Kanye in vibrant colors"
               fill
               priority
               className="object-cover rounded-lg"
