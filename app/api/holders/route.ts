@@ -1,11 +1,17 @@
 import { Connection, PublicKey } from "@solana/web3.js"
 
 const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
-const HELIUS_RPC_URL = "https://mainnet.helius-rpc.com/?api-key=" + (process.env.HELIUS_API_KEY || "")
-
-const connection = new Connection(HELIUS_RPC_URL)
+const HELIUS_API_KEY = process.env.HELIUS_API_KEY
+const HELIUS_RPC_URL = `https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}`
 
 export async function GET() {
+  if (!HELIUS_API_KEY) {
+    console.error("HELIUS_API_KEY is not set")
+    return new Response("Server configuration error", { status: 500 })
+  }
+
+  const connection = new Connection(HELIUS_RPC_URL)
+
   try {
     const mintPublicKey = new PublicKey(KANYE_TOKEN_MINT)
     const tokenAccounts = await connection.getProgramAccounts(
@@ -38,7 +44,8 @@ export async function GET() {
     return Response.json(holdersWithPercentage)
   } catch (error) {
     console.error("Error fetching token holders:", error)
-    return new Response("Error fetching token holders", { status: 500 })
+    return new Response(`Error fetching token holders: ${error instanceof Error ? error.message : String(error)}`, {
+      status: 500,
+    })
   }
 }
-
