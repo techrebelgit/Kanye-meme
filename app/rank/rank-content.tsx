@@ -1,57 +1,16 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Connection, PublicKey } from "@solana/web3.js"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-
-const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
-const HELIUS_RPC_URL = "https://mainnet.helius-rpc.com/?api-key=" + (process.env.NEXT_PUBLIC_HELIUS_API_KEY || "")
 
 interface TokenHolder {
   address: string
   amount: number
   rank: number
   rewardPercentage: number
-}
-
-const connection = new Connection(HELIUS_RPC_URL)
-
-async function getTokenHolders(mintAddress: string): Promise<TokenHolder[]> {
-  try {
-    const mintPublicKey = new PublicKey(mintAddress)
-    const tokenAccounts = await connection.getProgramAccounts(
-      new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"),
-      {
-        filters: [{ dataSize: 165 }, { memcmp: { offset: 0, bytes: mintPublicKey.toBase58() } }],
-      },
-    )
-
-    const holders = tokenAccounts.map((account) => {
-      const data = account.account.data
-      const owner = new PublicKey(data.slice(32, 64)).toBase58()
-      const amount = Number(data.readBigUInt64LE(64))
-
-      return { address: owner, amount, rank: 0, rewardPercentage: 0 }
-    })
-
-    const sortedHolders = holders
-      .sort((a, b) => b.amount - a.amount)
-      .slice(1, 51)
-      .map((holder, index) => ({ ...holder, rank: index + 1 }))
-
-    const totalAmount = sortedHolders.reduce((sum, holder) => sum + holder.amount, 0)
-
-    return sortedHolders.map((holder) => ({
-      ...holder,
-      rewardPercentage: (holder.amount / totalAmount) * 100,
-    }))
-  } catch (error) {
-    console.error("Error fetching token holders:", error)
-    throw error
-  }
 }
 
 export default function RankContent() {
@@ -63,7 +22,11 @@ export default function RankContent() {
     setLoading(true)
     setError(null)
     try {
-      const holderData = await getTokenHolders(KANYE_TOKEN_MINT)
+      const response = await fetch("/api/holders")
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      const holderData = await response.json()
       setHolders(holderData)
     } catch (err) {
       console.error("Error fetching token holders:", err)
@@ -75,7 +38,7 @@ export default function RankContent() {
 
   useEffect(() => {
     fetchTopHolders()
-  }, []) //Fixed: Added empty dependency array to useEffect
+  }, []) //Fixed: Added empty dependency array to only run on mount
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-[#333333] flex flex-col">
@@ -101,11 +64,11 @@ export default function RankContent() {
           </p>
           <p className="mb-4">
             The amount of rewards each holder receives is proportional to their share of the total tokens held by the
-            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you&apos;ll receive 10% of
+            top 50 wallets. For example, if you hold 10% of the tokens among the top 50 holders, you'll receive 10% of
             the daily rewards.
           </p>
           <p>
-            The percentages shown in the table below represent each wallet&apos;s share of the potential rewards, based on
+            The percentages shown in the table below represent each wallet's share of the potential rewards, based on
             their current token balance.
           </p>
         </motion.div>
