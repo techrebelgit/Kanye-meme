@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import type React from "react"
+import thumbnail from "../public/thumbnail.jpg"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -13,9 +14,9 @@ export const metadata: Metadata = {
     description: "The meme token that's stronger than ever.",
     images: [
       {
-        url: "/thumbnail.jpg",
-        width: 1200,
-        height: 630,
+        url: thumbnail.src,
+        width: thumbnail.width,
+        height: thumbnail.height,
         alt: "Artistic portrait of Kanye in vibrant colors",
       },
     ],
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "$KANYE Token",
     description: "The meme token that's stronger than ever.",
-    images: ["/thumbnail.jpg"],
+    images: [thumbnail.src],
   },
 }
 
@@ -39,5 +40,4 @@ export default function RootLayout({
     </html>
   )
 }
-
 
