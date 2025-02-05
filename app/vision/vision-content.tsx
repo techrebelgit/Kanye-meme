@@ -197,7 +197,7 @@ function HowItWorksSection() {
             <strong>Community-Driven</strong> → The more people trade, the more the ecosystem grows.
           </li>
           <li>
-            <strong>Passionate builder</strong> → This is the msot important. We don't care for the price. Builders build. 
+            <strong>Passionate builder</strong> → This is the msot important. We don&apos;t care for the price. Builders build. 
           </li>
         </ul>
       </div>
