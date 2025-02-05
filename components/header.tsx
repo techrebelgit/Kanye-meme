@@ -43,6 +43,9 @@ export default function Header() {
             <Link href="/rank" className="text-[#333333] hover:text-[#555555]">
               Rank
             </Link>
+            <Link href="/rankcheck" className="text-[#333333] hover:text-[#555555]">
+              RankCheck
+            </Link>
           </>
         )}
         <Button asChild className="bg-[#333333] text-white hover:bg-[#555555]">
@@ -62,6 +65,9 @@ export default function Header() {
           </Link>
           <Link href="/rank" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
             Rank
+          </Link>
+          <Link href="/rankcheck" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
+            RankCheck
           </Link>
         </div>
       )}
