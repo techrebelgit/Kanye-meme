@@ -56,8 +56,8 @@ export default function RankCheckContent() {
               fees that should be airdropped by the airlock system.
             </p>
             <p className="text-lg mb-4 max-w-2xl mx-auto">
-              Note: The first wallet (rank 1) is excluded as it's typically the liquidity pool. Percentages shown
-              represent each holder's share of the total tokens held by the top 50 wallets.
+              Note: The first wallet (rank 1) is excluded as it&apos;s typically the liquidity pool. Percentages shown
+              represent each holder&apos;s share of the total tokens held by the top 50 wallets.
             </p>
           </div>
         </motion.div>
