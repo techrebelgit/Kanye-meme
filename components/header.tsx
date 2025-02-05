@@ -2,12 +2,17 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu } from "lucide-react"
+import { Menu, ChevronDown } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { KanyeQuote } from "@/components/kanye-quote"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isDesktop, setIsDesktop] = useState(true)
 
   useEffect(() => {
@@ -29,25 +34,37 @@ export default function Header() {
         </Link>
         {isDesktop && <KanyeQuote />}
       </div>
-      {!isDesktop && (
-        <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <Menu className="h-6 w-6" />
-        </Button>
-      )}
       <div className="flex items-center space-x-4">
-        {isDesktop && (
-          <>
-            <Link href="/vision" className="text-[#333333] hover:text-[#555555]">
-              Vision
-            </Link>
-            <Link href="/rank" className="text-[#333333] hover:text-[#555555]">
-              Rank
-            </Link>
-            <Link href="/rankcheck" className="text-[#333333] hover:text-[#555555]">
-              RankCheck
-            </Link>
-          </>
-        )}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="sm">
+              {isDesktop ? (
+                <>
+                  Menu <ChevronDown className="ml-2 h-4 w-4" />
+                </>
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-56">
+            <DropdownMenuItem asChild>
+              <Link href="/vision" className="w-full">
+                VISION
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/rank" className="w-full">
+                KANYE RANK
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/rankcheck" className="w-full">
+                RANKCHECK
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <Button asChild className="bg-[#333333] text-white hover:bg-[#555555]">
           <Link
             href="https://dexscreener.com/solana/fsibnvgmfqzdkkxjfe7hkfv3gwjjewg6m2y72eyhmoon"
@@ -58,20 +75,6 @@ export default function Header() {
           </Link>
         </Button>
       </div>
-      {!isDesktop && isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white shadow-md py-2 z-10">
-          <Link href="/vision" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
-            Vision
-          </Link>
-          <Link href="/rank" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
-            Rank
-          </Link>
-          <Link href="/rankcheck" className="block px-6 py-2 text-[#333333] hover:bg-[#f5f5f5]">
-            RankCheck
-          </Link>
-        </div>
-      )}
     </header>
   )
 }
-

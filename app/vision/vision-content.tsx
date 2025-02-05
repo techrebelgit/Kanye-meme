@@ -29,7 +29,7 @@ function Hero() {
     <motion.section {...fadeIn} className="text-center space-y-8">
       <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter">Our Vision</h1>
       <p className="text-xl sm:text-2xl max-w-2xl mx-auto">
-        Uniting fans, building momentum, and shaping the future of fan engagement.
+        Uniting fans through tokens, shaping the future of fan engagement.
       </p>
       <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-lg overflow-hidden">
         <Image
@@ -75,13 +75,13 @@ function TableOfContents() {
 function IntroductionSection() {
   return (
     <motion.section id="introduction" {...fadeIn} className="space-y-6">
-      <h2 className="text-3xl sm:text-4xl font-bold">Introduction to Fan Tokens</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold">Fan Tokens</h2>
       <p className="text-lg sm:text-xl">
-        Fan tokens are a powerful way for communities to come together around a common goal. They allow fans to unite,
-        collaborate, and engage in meaningful ways, fostering a shared movement. The $KANYE token is not officially
-        affiliated with Kanye West, but it serves as a rallying point for fans to connect, build momentum, and work
-        towards bringing Kanye into the ecosystem. By participating, fans contribute to a collective effort that
-        amplifies their shared passion and vision.
+        Tokens are a powerful way for communities to come together around a common theme. 
+        They allow fans to unite, collaborate, and engage in meaningful ways. 
+        Ownership of a fan token creates a bond between holder and creator.
+        Buying a token is only the beginning of the holder experience. 
+        Either you are out or you are in. There is no in between. 
       </p>
       <div className="flex justify-center">
         <KanyeQuote />
@@ -95,11 +95,11 @@ function AboutSection() {
     <motion.section id="about" {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">About $KANYE</h2>
       <p className="text-lg sm:text-xl">
-        Step into the spotlight with $KANYE! This isn&apos;t just any token—it&apos;s a trendsetter in the fan token
-        revolution. By holding $KANYE, you join a community driven to make history. Think $Drake or $Kendrick could do
-        better? Well, they don&apos;t even exist yet! But if you&apos;re bold enough, go ahead and launch
-        them—let&apos;s see who hits $1B first! We&apos;re going HAM on Kanye—the one and only GOAT! Let&apos;s elevate
-        Kanye&apos;s influence in the crypto space together. WAGMI!
+        The purpose of this token is to explore those connections and build those experiences.
+        Memecoins are plagued with rugs, scams, entitled influencers, posers and gatekeepers. 
+        We need a $KANYE in this space. An unapologetic, trendsetting, bar-raising, uncontrolable builder. 
+        $KANYE is a big influence in my life. And I know he is for a lot of people. GOAT. 
+        Now play Off The Grid. 
       </p>
       <div className="flex justify-center">
         <KanyeQuote />
@@ -113,7 +113,7 @@ function HowItWorksSection() {
     <motion.section id="how-it-works" {...fadeIn} className="space-y-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-center">The $KANYE Journey – Inspired by the Legend 🎶</h2>
       <p className="text-lg sm:text-xl text-center">
-        $KANYE isn&apos;t just another token—it follows a structured path inspired by{" "}
+        $KANYE isn&apos;t will follow a structured path inspired by{" "}
         <strong>Kanye West&apos;s iconic albums</strong>, each representing a key phase in the ecosystem&apos;s growth.
       </p>
 
@@ -122,15 +122,15 @@ function HowItWorksSection() {
           title='"The College Dropout" – Fair Launch (Moonshot)'
           emoji="🎓"
           content={[
-            "Just like Kanye&apos;s breakthrough, $KANYE starts with no pre-sales, no insider allocations—it&apos;s a fair launch for everyone.",
+            "Just like his breakthrough, $KANYE starts with no pre-sales, no insider allocations. Fair launch.",
             "Anyone can buy at launch and start their journey.",
             "1% fee on buys & sells (while on Moonshot) to maintain market health.",
-            "When the market cap reaches 432 SOL (or 25 ETH), $KANYE graduates to the next level.",
+            "When the market cap reaches 432 SOL (or 25 ETH), $KANYE graduates.",
           ]}
         />
 
         <PhaseCard
-          title='"Graduation" – Locked Liquidity & Smart Fees (Meteora)'
+          title='"Graduation" – Locked Liquidity & Dinamic Fees (Meteora)'
           emoji="🎤"
           content={[
             "Just like Kanye leveled up with Graduation, this is where $KANYE gets serious.",
@@ -144,8 +144,8 @@ function HowItWorksSection() {
           title='"My Beautiful Dark Twisted Fantasy" – AirLock Rewards for Top Holders'
           emoji="🔥"
           content={[
-            "This is the masterpiece phase, where the top 50 wallets start earning daily SOL rewards.",
-            "The bigger your share, the bigger your cut.",
+            "This is the masterpiece of this token: the top 50 wallets start earning daily SOL rewards.",
+            "The bigger your share of the top 50, the bigger your cut.",
             "Large holders have no reason to sell, keeping the price stable.",
             "Even smaller holders benefit, knowing that big wallets are incentivized to hold.",
           ]}
@@ -196,10 +196,13 @@ function HowItWorksSection() {
           <li>
             <strong>Community-Driven</strong> → The more people trade, the more the ecosystem grows.
           </li>
+          <li>
+            <strong>Passionate builder</strong> → This is the msot important. We don't care for the price. Builders build. 
+          </li>
         </ul>
       </div>
 
-      <p className="text-xl font-bold text-center">Hold $KANYE. Earn Rewards. Watch the Throne.</p>
+      <p className="text-xl font-bold text-center"> Watch the Throne.</p>
 
       <div className="text-center mt-12">
         <Button asChild className="bg-[#333333] text-white hover:bg-[#555555]">
