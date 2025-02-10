@@ -3,8 +3,8 @@
 import { motion } from "framer-motion"
 import Link from "next/link"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { KanyeQuote } from "@/components/kanye-quote"
+import { Button } from "@/app/components/ui/button"
+import { KanyeQuote } from "@/app/components/kanye-quote"
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },

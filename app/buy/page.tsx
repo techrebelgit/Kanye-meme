@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import BuyContent from "./buy-content"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import Header from "@/app/components/Header"
+import Footer from "@/app/components/Footer"
 
 export const metadata: Metadata = {
   title: "Buy $KANYE Token",

@@ -37,7 +37,9 @@ const buttonVariants = cva(
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+  asChild?: boolean;
+  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";  // ✅ Explicit variant types
+  size?: "default" | "sm" | "lg" | "icon";  // ✅ Explicit size types
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -45,10 +47,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
+  className={cn(buttonVariants({ variant, size }), className)}
+  ref={ref}
+  {...props}
+/>
     )
   }
 )
