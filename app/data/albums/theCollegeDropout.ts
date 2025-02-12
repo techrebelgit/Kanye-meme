@@ -1126,7 +1126,7 @@ Are you gonna be, are you gonna be, well, well, well, well)`,
           `“Slow Jamz” is a smooth, melodic track from Kanye West’s debut album. Jamie Foxx’s hook and Twista’s fast-paced verse are some of the more memorable parts of the album.` ,
       },
       {
-        title: "Breathe in Breathe Out",
+        title: "Breathe In Breathe Out",
         lyrics: `[Chorus: Ludacris]
 Yeah! Breathe in, breathe out
 If you're iced up, pull your sleeves out
@@ -1241,7 +1241,7 @@ Chi-city (Chi-city), Chi-city (Chi-city)
           `Breathe In Breathe Out” sees Kanye West rap about his own superficiality in a light-hearted, self-aware fashion. ` ,
       },
       {
-        title: "School Spirit (Skit 1)",
+        title: "School Spirit Skit 1",
         lyrics: `[Skit 1: DeRay Davis]
 Now beat that!
 And your mother's saying "Go to college"
@@ -1375,7 +1375,7 @@ There they was`,
 This song uses an old-school Aretha Franklin sample from the song “Spirit in the Dark”. Aretha gave Kanye clearance for the sample on the condition that the song didn’t have profanity, which is why this song is edited even on the explicit version of the album.` ,
       },
       {
-        title: "School Spirit (Skit 2)",
+        title: "School Spirit Skit 2",
         lyrics: `[Skit: De'Ray Davis]
 You keep it going, man, you keep those books rolling
 You pick up all those books that you're gonna read and not remember and you roll, man
@@ -1401,7 +1401,7 @@ That's right, those degrees"`,
           `Donda West, Kanye West’s mother, was a strong believer in academics and this skit can be seen to be directed at her. Of course, there is no disrespect intended, but this is what Kanye felt was right and so who is to stop him?` ,
       },
       {
-        title: "Lil Jimmy (Skit)",
+        title: "Lil Jimmy Skit",
         lyrics: `[Spoken Word: The World Famous Tony Williams & DeRay]
 Hey Jimmy, where you going?
 I don't know where I'm going
@@ -1524,7 +1524,7 @@ Black Jack Johnson, it's no contest (Throw your hands up)
           `Off of 2004’s The College Dropout, Kanye, Mos Def and Freeway drop this fast-paced track dedicated to the titular purpose: the verses are done with two words (or two stressed syllables) for every beat (quarter of bar)` ,
       },
       {
-        title: "Through the Wire",
+        title: "Through The Wire",
         lyrics: `[Intro: Kanye West, Chaka Khan]
 (Through the test of time)
 Yo, G, they can't stop me from rappin', can they?
