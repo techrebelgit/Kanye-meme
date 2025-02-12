@@ -8,7 +8,7 @@ interface AlbumPlayerProps {
   onSongChange: (songInfo: SongInfo) => void
 }
 
-interface SongInfo {
+export interface SongInfo {
   title: string
   author: string
 }

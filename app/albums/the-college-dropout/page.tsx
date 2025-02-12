@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import AlbumPlayer from "@/app/components/AlbumPlayer"
-import { type SongInfo } from "@/app/components/AlbumPlayer"
+import type { SongInfo } from "@/app/components/AlbumPlayer"
 import Image from "next/image"
 import TokenGate from "@/app/components/TokenGate"
 import { theCollegeDropout } from "@/app/data/albums/theCollegeDropout"
