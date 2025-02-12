@@ -1,0 +1,11 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
+    eslint: {
+      dirs: ["pages", "components", "lib", "layouts", "utils", "app"],
+    },
+  }
+  
+  module.exports = nextConfig
+  
+  

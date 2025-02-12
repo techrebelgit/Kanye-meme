@@ -4,8 +4,6 @@ import { TokenGate } from "./TokenGate"
 import Link from "next/link"
 import { Button } from "./ui/button"
 
-const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
-const REQUIRED_BALANCE = 50000000
 
 export default function KanyeBalanceCTA() {
   return (

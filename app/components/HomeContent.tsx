@@ -5,7 +5,6 @@ import About from "./About"
 import Tokenomics from "./Tokenomics"
 import Rewards from "./rewards"
 import JoinMovement from "./JoinMovement"
-import KanyeBalanceCTA from "./KanyeBalanceCTA"
 
 export default function HomeContent() {
   return (
