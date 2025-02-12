@@ -1,6 +1,6 @@
 "use client"
 
-import { TokenGate } from "./TokenGate"
+import  TokenGate from "./TokenGate"
 import Link from "next/link"
 import { Button } from "./ui/button"
 

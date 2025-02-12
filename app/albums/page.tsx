@@ -1,6 +1,4 @@
-"use client"
-import AlbumCard from "../components/AlbumCard"
-import { TokenGate } from "../components/TokenGate"
+import AlbumCard from "@/app/components/AlbumCard"
 
 const albums = [
   {
@@ -77,8 +75,7 @@ const albums = [
 
 export default function AlbumsPage() {
   return (
-    <TokenGate >
-       <div className="min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-8 text-black">KANYE WEST ALBUMS</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -95,7 +92,6 @@ export default function AlbumsPage() {
         </div>
       </div>
     </div>
-    </TokenGate>
   )
 }
 

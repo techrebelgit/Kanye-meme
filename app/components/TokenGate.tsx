@@ -14,7 +14,7 @@ interface TokenGateProps {
   children: ReactNode
 }
 
-export function TokenGate({ children }: TokenGateProps) {
+const TokenGate: React.FC<TokenGateProps> = ({ children }) => {
   const { publicKey, connected } = useWallet()
   const [balance, setBalance] = useState<number | null>(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -89,3 +89,4 @@ export function TokenGate({ children }: TokenGateProps) {
   return <>{children}</>
 }
 
+export default TokenGate
