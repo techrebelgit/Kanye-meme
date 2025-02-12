@@ -34,7 +34,7 @@ const TheCollegeDropoutPage = () => {
             </div>
             <div>
               <h1 className="text-5xl font-bold mb-4 text-amber-200">{theCollegeDropout.title}</h1>
-              <p className="text-xl mb-4 text-amber-100">Kanye West's debut studio album</p>
+              <p className="text-xl mb-4 text-amber-100">Kanye West&apos;s debut studio album</p>
               <p className="text-lg text-amber-300">Released: {theCollegeDropout.releaseDate}</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ const TheCollegeDropoutPage = () => {
                 </pre>
               </div>
               <div className="bg-amber-950 bg-opacity-50 rounded-xl p-6 shadow-xl">
-                <h2 className="text-2xl font-bold mb-4 text-amber-200">Kanye's Corner</h2>
+                <h2 className="text-2xl font-bold mb-4 text-amber-200">Kanye&apos;s Corner</h2>
                 <pre className="whitespace-pre-wrap font-mono text-sm text-amber-100 overflow-auto max-h-96">
                   {currentTrack.comments || "Comments not available for this track"}
                 </pre>
