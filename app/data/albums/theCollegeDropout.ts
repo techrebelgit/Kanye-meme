@@ -295,7 +295,157 @@ This grave shifts is like a slave ship"
 He constantly comes back to his constant fear of having to work a 9-5.
 That's slave shit in his perspective` ,
       },
-      // Add more tracks here
+      {
+        title: "Spaceship",
+        lyrics: `[Chorus: Kanye West & GLC]
+I've been working this grave-shift
+And I ain't made shit (Yeah, yeah)
+I wish I could (Me, too)
+Buy me a spaceship and fly (I swear I do)
+Past the sky, oh
+GLC feel you, Ye—I feel you, man
+I've been working this grave-shift
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky (Man, man, man...)
+Oh, oh, oh
+
+[Verse 1: Kanye West]
+If my manager insults me again
+I will be assaulting him
+After I fuck the manager up
+Then, I'm gonna shorten the register up
+Let's go back, back to the Gap
+Look at my check—wasn't no scratch
+So if I stole, wasn't my fault
+Yeah, I stole—never got caught
+They take me to the back and pat me
+Asking me about some khakis
+But let some Black people walk in
+I bet you they show off their token blackie
+Oh, now they love Kanye
+"Let's put him all in the front of the store"
+So I'm on break
+Next to the "No Smoking" sign with a blunt in the mall
+Taking my hits, writing my hits
+Writing my rhymes, playing my mind
+This fucking job can't help him
+So I quit, y'all welcome
+Y'all don't know my struggle
+Y'all can't match my hustle
+You can't catch my hustle
+You can't fathom my love, dude
+Lock yourself in a room
+Doing five beats a day for three summers
+That's A Different World like Cree Summer's
+I deserve to do these numbers
+"The kid that made that deserves that Maybach!"
+So many records in my basement
+I'm just waitin' on my spaceship, blaow!
+
+[Chorus: Kanye West & GLC]
+I've been working this grave-shift
+And I ain't made shit (Yeah, yeah)
+I wish I could (Me, too)
+Buy me a spaceship and fly (I swear I do)
+Past the sky, oh
+GLC feel you, Ye—I feel you, man
+I've been working this grave-shift
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky (Man, man, man...)
+Oh, oh, oh
+
+[Verse 1: Kanye West]
+If my manager insults me again
+I will be assaulting him
+After I fuck the manager up
+Then, I'm gonna shorten the register up
+Let's go back, back to the Gap
+Look at my check—wasn't no scratch
+So if I stole, wasn't my fault
+Yeah, I stole—never got caught
+They take me to the back and pat me
+Asking me about some khakis
+But let some Black people walk in
+I bet you they show off their token blackie
+Oh, now they love Kanye
+"Let's put him all in the front of the store"
+So I'm on break
+Next to the "No Smoking" sign with a blunt in the mall
+Taking my hits, writing my hits
+Writing my rhymes, playing my mind
+This fucking job can't help him
+So I quit, y'all welcome
+Y'all don't know my struggle
+Y'all can't match my hustle
+You can't catch my hustle
+You can't fathom my love, dude
+Lock yourself in a room
+Doing five beats a day for three summers
+That's A Different World like Cree Summer's
+I deserve to do these numbers
+"The kid that made that deserves that Maybach!"
+So many records in my basement
+I'm just waitin' on my spaceship, blaow!
+
+[Chorus: Kanye West, GLC, & Kanye w/ Choir]
+I've been working this grave-shift
+Aww, man, this pressure
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky, oh
+I've been working this grave-shift
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky
+Oh, oh, oh
+
+[Verse 3: Consequence]
+I 'member having to take the dollar cab
+Coming home real late at night
+Standing on my feet all damn day
+Tryna make this thing right
+And havin' one of my coworkers say, "Yo, you look just like
+This kid I seen in an old Busta Rhymes video the other night"
+Well, easy come, easy go, how that saying goes
+No more broad service, cars, and them TV shows
+That all had got snatched from me, A&Rs and they faculties
+All turn they back on me and didn't wanna hear a rap from me
+So naturally, actually, had to face things factually
+Had to be a catastrophe, empty fridge is staring back at me
+'Cause nothing's there, nothing's fair
+I don't wanna ever go back there
+So I won't be taking no days off 'til my spaceship takes off, blaow!
+
+[Chorus: Kanye West & Kanye w/ Choir]
+I've been working this grave-shift
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky, oh
+I've been working this grave-shift
+And I ain't made shit
+I wish I could
+Buy me a spaceship and fly
+Past the sky
+Oh, oh, oh
+
+[Outro: Tony Williams]
+I wanna fly
+I wanna fly
+I said I want my chariot to pick me up
+And take a brother for a ride
+(Heaven knows, heaven knows)`,
+        comments:
+          `Again Kanye expresses his discontent with work and having "authority" over him. 
+        
+          ` ,
+      },
     ],
   }
   

@@ -2,128 +2,168 @@
 
 import type React from "react"
 import { useEffect, useState } from "react"
-import { PlayCircle, PauseCircle } from "lucide-react"
 
 interface AlbumPlayerProps {
   playlistId: string
   onSongChange: (songInfo: SongInfo) => void
 }
 
-export interface SongInfo {
+interface SongInfo {
   title: string
-  artists: string[]
-  videoId: string
+  author: string
 }
 
-interface Track {
-  title: string
-  artists: Array<{ name: string }>
-  videoId: string
-  duration: string
+declare global {
+  interface Window {
+    onYouTubeIframeAPIReady: () => void
+    YT: any
+  }
 }
 
 const AlbumPlayer: React.FC<AlbumPlayerProps> = ({ playlistId, onSongChange }) => {
-  const [tracks, setTracks] = useState<Track[]>([])
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
+  const [player, setPlayer] = useState<any>(null)
   const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
-    fetchAlbumData()
-  }, [])
+    const tag = document.createElement("script")
+    tag.src = "https://www.youtube.com/iframe_api"
+    const firstScriptTag = document.getElementsByTagName("script")[0]
+    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag)
 
-  const fetchAlbumData = async () => {
-    try {
-      const response = await fetch(`/api/youtube-music?action=album&id=${playlistId}`)
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const data = await response.json()
-      setTracks(data.tracks)
-      if (data.tracks.length > 0) {
-        handleSongChange(data.tracks[0], 0)
-      }
-    } catch (error) {
-      console.error("Error fetching album data:", error)
+    window.onYouTubeIframeAPIReady = () => {
+      const newPlayer = new window.YT.Player("youtube-player", {
+        height: "390",
+        width: "640",
+        playerVars: {
+          listType: "playlist",
+          list: playlistId,
+          controls: 0,
+          modestbranding: 1,
+          rel: 0,
+          showinfo: 0,
+          iv_load_policy: 3,
+        },
+        events: {
+          onReady: onPlayerReady,
+          onStateChange: onPlayerStateChange,
+        },
+      })
+      setPlayer(newPlayer)
+    }
+  }, [playlistId])
+
+  const onPlayerReady = (event: any) => {
+    updateCurrentSongInfo(event.target)
+  }
+
+  const onPlayerStateChange = (event: any) => {
+    if (event.data === window.YT.PlayerState.PLAYING) {
+      setIsPlaying(true)
+      updateCurrentSongInfo(event.target)
+    } else {
+      setIsPlaying(false)
     }
   }
 
-  const handleSongChange = (track: Track, index: number) => {
-    setCurrentTrackIndex(index)
+  const updateCurrentSongInfo = (player: any) => {
+    const videoData = player.getVideoData()
     onSongChange({
-      title: track.title,
-      artists: track.artists.map((artist) => artist.name),
-      videoId: track.videoId,
+      title: videoData.title,
+      author: videoData.author,
     })
   }
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying)
-    // Here you would typically control the actual audio playback
+    if (player) {
+      if (isPlaying) {
+        player.pauseVideo()
+      } else {
+        player.playVideo()
+      }
+    }
   }
 
   const nextTrack = () => {
-    const newIndex = (currentTrackIndex + 1) % tracks.length
-    handleSongChange(tracks[newIndex], newIndex)
+    if (player) {
+      player.nextVideo()
+    }
   }
 
   const previousTrack = () => {
-    const newIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length
-    handleSongChange(tracks[newIndex], newIndex)
+    if (player) {
+      player.previousVideo()
+    }
   }
 
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className="bg-amber-950 bg-opacity-50 rounded-xl p-6">
-        <div className="space-y-4">
-          {tracks.map((track, index) => (
-            <div
-              key={track.videoId}
-              className={`flex items-center p-4 rounded-lg cursor-pointer transition-colors
-                ${index === currentTrackIndex ? "bg-amber-900" : "hover:bg-amber-900/50"}`}
-              onClick={() => handleSongChange(track, index)}
-            >
-              <div className="mr-4">
-                {index === currentTrackIndex ? (
-                  <PlayCircle className="w-6 h-6 text-amber-300" />
-                ) : (
-                  <span className="text-amber-300 w-6 block text-center">{index + 1}</span>
-                )}
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium text-amber-100">{track.title}</h3>
-                <p className="text-sm text-amber-300">{track.artists[0].name}</p>
-              </div>
-              <div className="text-sm text-amber-400">{track.duration}</div>
-            </div>
-          ))}
+      <div className="relative">
+        <div id="youtube-player" className="w-full aspect-w-16 aspect-h-9"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="flex space-x-4">
+            <button onClick={previousTrack} className="text-white hover:text-amber-300 transition-colors">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+              </svg>
+            </button>
+            <button onClick={togglePlayPause} className="text-white hover:text-amber-300 transition-colors">
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-16 w-16"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-16 w-16"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              )}
+            </button>
+            <button onClick={nextTrack} className="text-white hover:text-amber-300 transition-colors">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="mt-6 flex justify-center space-x-4">
-        <button onClick={previousTrack} className="text-amber-300 hover:text-amber-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-          </svg>
-        </button>
-        <button onClick={togglePlayPause} className="text-amber-300 hover:text-amber-100">
-          {isPlaying ? <PauseCircle className="h-12 w-12" /> : <PlayCircle className="h-12 w-12" />}
-        </button>
-        <button onClick={nextTrack} className="text-amber-300 hover:text-amber-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-          </svg>
-        </button>
       </div>
     </div>
   )
