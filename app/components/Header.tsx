@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
@@ -7,11 +7,9 @@ import { Button } from "./ui/button"
 import { KanyeQuote } from "./kanye-quote"
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
-import { useWallet } from "@solana/wallet-adapter-react"
 
 export default function Header() {
   const [isDesktop, setIsDesktop] = useState(true)
-  const { publicKey, connected } = useWallet()
 
   useEffect(() => {
     const checkIfDesktop = () => {
