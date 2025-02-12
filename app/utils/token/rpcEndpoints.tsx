@@ -1,6 +1,6 @@
 import { Connection } from "@solana/web3.js"
 
-const ALCHEMY_RPC_URL = `https://solana-mainnet.g.alchemy.com/v2/QHS7XyJobH44iVtoNp3CCT_0GdsUSpdV`
+export const ALCHEMY_RPC_URL = `https://solana-mainnet.g.alchemy.com/v2/QHS7XyJobH44iVtoNp3CCT_0GdsUSpdV`
 
 const FALLBACK_RPC_ENDPOINTS = [
   "https://api.mainnet-beta.solana.com",
