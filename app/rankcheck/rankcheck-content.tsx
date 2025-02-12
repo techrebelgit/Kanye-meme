@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Header from "@/app/components/Header"
 import Footer from "@/app/components/Footer"
 import { Button } from "@/app/components/ui/button"
 import { Input } from "../components/ui/input"
@@ -46,7 +45,6 @@ export default function RankCheckContent() {
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-[#333333] flex flex-col">
-      <Header />
       <main className="flex-grow container mx-auto px-4 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <h1 className="text-5xl sm:text-7xl font-bold mb-8 text-center tracking-tighter">Token Holders Rank Check</h1>
