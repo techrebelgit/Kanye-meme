@@ -8,7 +8,7 @@ import Link from "next/link"
 import { Button } from "./ui/button"
 
 const KANYE_TOKEN_MINT = "FsiBnVGmfQzDkkXJfe7hKfV3GWjJEwg6M2Y72eyhmoon"
-const REQUIRED_BALANCE = 5000000000000
+const REQUIRED_BALANCE = 1000000
 
 interface TokenGateProps {
   children: ReactNode
