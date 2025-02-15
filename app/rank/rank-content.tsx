@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Footer from "@/app/components/Footer"
 import { Button } from "@/app/components/ui/button"
 import { motion } from "framer-motion"
 import { formatNumber } from "@/lib/utils"

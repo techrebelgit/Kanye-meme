@@ -1,5 +1,4 @@
 
-import Footer from "../components/Footer"
 import VisionContent from "./vision-content"
 
 export default function VisionPage() {
