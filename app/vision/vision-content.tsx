@@ -96,7 +96,7 @@ function AboutSection() {
       <p className="text-lg sm:text-xl">
         The purpose of this token is to explore and build those experiences. To show what is possible with this technology. 
         Memecoins are plagued with rugs, scams, entitled influencers, posers and gatekeepers. 
-        We need a $KANYE in this space. An unapologetic, trendsetting, bar-raising, uncontrolable, "cant-tell-me-nothing" builder. 
+        We need a $KANYE in this space. Someone to raise the bar. 
         Now play Off The Grid. 
       </p>
       <div className="flex justify-center">
@@ -130,7 +130,7 @@ function HowItWorksSection() {
           title='"Late Registration" – Pre-bond'
           emoji="🎓"
           content={[
-            "Once The College Dropout is released, it's time to wake up!.",
+            "Once The College Dropout is released, it&apos;s time to wake up!.",
             "On this stage we will start making doing efforts to Touch the Sky",
             "1% fee on buys & sells (while on Moonshot) to maintain market health.",
             "When the market cap reaches 432 SOL (or 25 ETH), $KANYE graduates.",

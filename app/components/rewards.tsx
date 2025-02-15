@@ -122,7 +122,7 @@ export default function Rewards() {
           <li>Get in early, accumulate tokens, and enjoy exclusive benefits.</li>
           <li>Be part of an innovative fan-driven project that leverages tokenomics for engagement and rewards.</li>
           <li>No more pump and dump—grow the community and earn lifetime rewards!</li>
-          <li>Your holdings give you real, perpetual ownership in the token's success!</li>
+          <li>Your holdings give you real, perpetual ownership in the token&apos;s success!</li>
         </ul>
       </div>
     </motion.section>

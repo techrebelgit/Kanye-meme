@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import Tokenomics from "@/app/components/Tokenomics"
 import Rewards from "@/app/components/rewards"
-import Image from "next/image"
 import { Button } from "@/app/components/ui/button"
 import Link from "next/link"
 

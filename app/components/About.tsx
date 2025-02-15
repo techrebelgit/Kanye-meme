@@ -1,4 +1,3 @@
-import { KanyeQuote } from "./kanye-quote"
 
 export default function About() {
   return (
