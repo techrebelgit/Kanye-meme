@@ -8,7 +8,7 @@ export default function VisionPage() {
       <main className="flex-grow">
         <VisionContent />
       </main>
-      <Footer />
+
     </div>
   )
 }

@@ -133,7 +133,6 @@ export default function RankContent() {
           </motion.div>
         )}
       </main>
-      <Footer />
     </div>
   )
 }

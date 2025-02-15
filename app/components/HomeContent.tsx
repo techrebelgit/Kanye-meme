@@ -4,6 +4,7 @@ import Hero from "./Hero"
 import About from "./About"
 import Link from "next/link"
 import { Button } from "./ui/button"
+import FAQ from "./FAQ"
 
 export default function HomeContent() {
   return (
@@ -12,6 +13,8 @@ export default function HomeContent() {
         <Hero />
         <About />
         <TokenomicsPreview />
+        <FAQ />
+
       </main>
     </>
   )
