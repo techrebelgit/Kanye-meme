@@ -40,6 +40,11 @@ export default function Header() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
+              <DropdownMenuItem asChild>
+                  <Link href="/albums" className="w-full">
+                    LISTEN
+                  </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/vision" className="w-full">
                     VISION
@@ -51,8 +56,8 @@ export default function Header() {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/rankcheck" className="w-full">
-                    RANKCHECK
+                  <Link href="/tokenomics" className="w-full">
+                    TOKENOMICS
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>

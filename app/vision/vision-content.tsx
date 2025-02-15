@@ -77,11 +77,10 @@ function IntroductionSection() {
     <motion.section id="introduction" {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">Fan Tokens</h2>
       <p className="text-lg sm:text-xl">
-        Tokens are a powerful way for communities to come together around a common theme. 
-        They allow fans to unite, collaborate, and engage in meaningful ways. 
-        Ownership of a fan token creates a bond between holder and creator.
+        Tokens are a powerful way for creators to shape how their fans experience their art.  
+
+        Ownership of a token creates a bond between holder and creator. This bond can be used to craft exclusive experiences for holders.
         Buying a token is only the beginning of the holder experience. 
-        Either you are out or you are in. There is no in between. 
       </p>
       <div className="flex justify-center">
         <KanyeQuote />
@@ -95,10 +94,9 @@ function AboutSection() {
     <motion.section id="about" {...fadeIn} className="space-y-6">
       <h2 className="text-3xl sm:text-4xl font-bold">About $KANYE</h2>
       <p className="text-lg sm:text-xl">
-        The purpose of this token is to explore those connections and build those experiences.
+        The purpose of this token is to explore and build those experiences. To show what is possible with this technology. 
         Memecoins are plagued with rugs, scams, entitled influencers, posers and gatekeepers. 
-        We need a $KANYE in this space. An unapologetic, trendsetting, bar-raising, uncontrolable builder. 
-        $KANYE is a big influence in my life. And I know he is for a lot of people. GOAT. 
+        We need a $KANYE in this space. An unapologetic, trendsetting, bar-raising, uncontrolable, "cant-tell-me-nothing" builder. 
         Now play Off The Grid. 
       </p>
       <div className="flex justify-center">
@@ -113,7 +111,7 @@ function HowItWorksSection() {
     <motion.section id="how-it-works" {...fadeIn} className="space-y-8">
       <h2 className="text-3xl sm:text-4xl font-bold text-center">The $KANYE Journey – Inspired by the Legend 🎶</h2>
       <p className="text-lg sm:text-xl text-center">
-        $KANYE isn&apos;t will follow a structured path inspired by{" "}
+        $KANYE will follow a structured path inspired by{" "}
         <strong>Kanye West&apos;s iconic albums</strong>, each representing a key phase in the ecosystem&apos;s growth.
       </p>
 
@@ -123,14 +121,23 @@ function HowItWorksSection() {
           emoji="🎓"
           content={[
             "Just like his breakthrough, $KANYE starts with no pre-sales, no insider allocations. Fair launch.",
-            "Anyone can buy at launch and start their journey.",
+            "Anyone can buy at launch and hold.",
+            "1% fee on buys & sells (while on Moonshot) to maintain market health.",
+            "We will start building on this phase.",
+          ]}
+        />
+        <PhaseCard
+          title='"Late Registration" – Pre-bond'
+          emoji="🎓"
+          content={[
+            "Once The College Dropout is released, it's time to wake up!.",
+            "On this stage we will start making doing efforts to Touch the Sky",
             "1% fee on buys & sells (while on Moonshot) to maintain market health.",
             "When the market cap reaches 432 SOL (or 25 ETH), $KANYE graduates.",
           ]}
         />
-
         <PhaseCard
-          title='"Graduation" – Locked Liquidity & Dinamic Fees (Meteora)'
+          title='"Graduation" – '
           emoji="🎤"
           content={[
             "Just like Kanye leveled up with Graduation, this is where $KANYE gets serious.",
@@ -140,49 +147,8 @@ function HowItWorksSection() {
           ]}
         />
 
-        <PhaseCard
-          title='"My Beautiful Dark Twisted Fantasy" – AirLock Rewards for Top Holders'
-          emoji="🔥"
-          content={[
-            "This is the masterpiece of this token: the top 50 wallets start earning daily SOL rewards.",
-            "The bigger your share of the top 50, the bigger your cut.",
-            "Large holders have no reason to sell, keeping the price stable.",
-            "Even smaller holders benefit, knowing that big wallets are incentivized to hold.",
-          ]}
-        />
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
-        <h3 className="text-2xl font-bold">Example: How You Earn SOL Rewards</h3>
-        <p>Let&apos;s say:</p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            You hold <strong>5M $KANYE tokens</strong>.
-          </li>
-          <li>
-            The top 50 wallets together hold <strong>50M tokens</strong>.
-          </li>
-          <li>
-            Your share of the top 50 wallets = <strong>5M / 50M = 10%</strong>.
-          </li>
-        </ul>
-        <p>
-          Now, assume the locked liquidity pool generates <strong>X SOL per day</strong> from trading fees.
-        </p>
-        <p>
-          Your <strong>daily SOL earnings</strong> = <strong>10% of X</strong> → <strong>0.10 × X SOL</strong>.
-        </p>
-        <h4 className="text-xl font-semibold mt-4">Real-World Example:</h4>
-        <p>If the locked liquidity generates:</p>
-        <ul className="list-disc pl-5 space-y-2">
-          <li>
-            <strong>100 SOL per day</strong> → You receive <strong>10 SOL per day</strong>.
-          </li>
-          <li>
-            <strong>500 SOL per day</strong> → You receive <strong>50 SOL per day</strong>.
-          </li>
-        </ul>
-      </div>
 
       <div className="bg-white p-6 rounded-lg shadow-sm space-y-4">
         <h3 className="text-2xl font-bold">Why This is a Legendary Move 🎶</h3>
