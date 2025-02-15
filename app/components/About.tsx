@@ -11,7 +11,7 @@ export default function About() {
         To enjoy the experience you will need to hold $Kanye.
       </p>      
       <p className="text-lg sm:text-xl">
-        This is not just another Memecoin. I don't care for the price. 
+        This is not just another Memecoin. I don&apos;t care for the price. 
       </p>
       <p className="text-lg sm:text-xl">
         I care about utility and holder experience. 
