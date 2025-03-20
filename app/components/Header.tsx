@@ -28,7 +28,7 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold text-[#333333] hover:text-[#555555]">
           $KANYE
         </Link>
-        {isDesktop && <KanyeQuote />}
+
       </div>
       <div className="flex items-center space-x-4">
         {isDesktop ? (
