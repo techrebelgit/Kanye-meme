@@ -1,8 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Header from "@/app/components/Header"
-import Footer from "@/app/components/Footer"
 import { Button } from "@/app/components/ui/button"
 import { motion } from "framer-motion"
 import { formatNumber } from "@/lib/utils"
@@ -43,7 +41,7 @@ export default function RankContent() {
 
   return (
     <div className="min-h-screen bg-[#F5F5F5] text-[#333333] flex flex-col">
-      <Header />
+ 
       <main className="flex-grow container mx-auto px-4 py-16">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           <h1 className="text-5xl sm:text-7xl font-bold mb-8 text-center tracking-tighter">Top 50 $KANYE Holders</h1>
@@ -134,7 +132,6 @@ export default function RankContent() {
           </motion.div>
         )}
       </main>
-      <Footer />
     </div>
   )
 }
