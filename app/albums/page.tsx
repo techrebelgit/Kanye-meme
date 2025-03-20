@@ -12,7 +12,7 @@ const albums = [
     title: "Late Registration",
     year: "2005",
     imageUrl: "/Late-Registration-Cover.jpg",
-    isActive: false,
+    isActive: true,
     slug: "late-registration",
   },
   {
