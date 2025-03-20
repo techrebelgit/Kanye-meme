@@ -102,8 +102,8 @@ const albums = [
   {
     title: "BUlly",
     year: "2025",
-    imageUrl: "/placeholder.svg?height=300&width=300",
-    isActive: false,
+    imageUrl: "/bully.png",
+    isActive: true,
     slug: "bully",
   },
   
